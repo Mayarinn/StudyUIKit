@@ -20,6 +20,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         view.addSubview(titleLabel)
         view.backgroundColor = .systemMint
+        
+        NSLayoutConstraint.activate([
+            
+        ])
     }
 
 
