@@ -21,9 +21,13 @@ class ViewController: UIViewController {
         view.addSubview(titleLabel)
         view.backgroundColor = .systemMint
         
-        NSLayoutConstraint.activate([
-            
-        ])
+        let titleTopConstraint = view.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20)
+        titleTopConstraint.isActive = true
+        
+//        let titleConstraints = [
+//            titleLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor)
+//        ]
+//        NSLayoutConstraint.activate(titleConstraints)
     }
 
 
