@@ -11,6 +11,7 @@ class ViewController: UIViewController {
 
     var titleLabel: UILabel {
         let titleLabel = UILabel()
+        titleLabel.text = "Title"
         
         return titleLabel
     }
