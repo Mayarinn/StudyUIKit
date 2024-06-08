@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  StudyUIKit
 //
-//  Created by Maÿarinn Tindómë on 6/5/24.
+//  Created by Karina Osadchaya on 6/5/24.
 //
 
 import UIKit
