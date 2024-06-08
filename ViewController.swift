@@ -9,6 +9,12 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var titleLabel: UILabel {
+        let titleLabel = UILabel()
+        
+        return titleLabel
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
