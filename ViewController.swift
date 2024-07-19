@@ -33,10 +33,14 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemMint
-        view.addSubview(titleLabel)
-        view.addSubview(imageView)
+        addSubviews()
         setConstraints()
         
+    }
+    
+    func addSubviews(){
+        view.addSubview(titleLabel)
+        view.addSubview(imageView)
     }
     
     func setConstraints(){
