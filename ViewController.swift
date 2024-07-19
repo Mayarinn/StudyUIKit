@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     var titleLabel: UILabel = {
         let titleLabel = UILabel()
         titleLabel.text = "Title"
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
         
         return titleLabel
     }()
@@ -20,7 +21,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .systemMint
         view.addSubview(titleLabel)
-        titleLabel.translatesAutoresizingMaskIntoConstraints = false
         setConstraints()
         
     }
