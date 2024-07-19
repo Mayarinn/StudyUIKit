@@ -34,6 +34,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .systemMint
         view.addSubview(titleLabel)
+        view.addSubview(imageView)
         setConstraints()
         
     }
