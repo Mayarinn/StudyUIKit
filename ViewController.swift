@@ -19,6 +19,15 @@ class ViewController: UIViewController {
         return titleLabel
     }()
     
+    var imageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: "2puss")
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.contentMode = .scaleAspectFit
+        
+        return imageView
+    }()
+    
 // MARK: - functions
 
     override func viewDidLoad() {
