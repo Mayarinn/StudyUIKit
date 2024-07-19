@@ -28,6 +28,15 @@ class ViewController: UIViewController {
         return imageView
     }()
     
+    var descLabel: UILabel = {
+        let descLabel = UILabel()
+        descLabel.text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Malesuada pellentesque elit eget gravida cum. Dui nunc mattis enim ut. Ac felis donec et odio. Et tortor at risus viverra adipiscing at in tellus integer."
+        descLabel.numberOfLines = 0
+        descLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        return descLabel
+    }()
+    
     var stackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
