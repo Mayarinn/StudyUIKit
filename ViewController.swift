@@ -60,6 +60,7 @@ class ViewController: UIViewController {
         view.addSubview(titleLabel)
         view.addSubview(imageView)
         view.addSubview(stackView)
+        stackView.addArrangedSubview(descLabel)
     }
     
     func setConstraints(){
