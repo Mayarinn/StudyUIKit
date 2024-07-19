@@ -28,6 +28,15 @@ class ViewController: UIViewController {
         return imageView
     }()
     
+    var stackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.axis = .vertical
+        stackView.spacing = 20
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        
+        return stackView
+    }()
+    
 // MARK: - functions
 
     override func viewDidLoad() {
