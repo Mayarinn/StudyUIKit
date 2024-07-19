@@ -28,15 +28,40 @@ class ViewController: UIViewController {
         return imageView
     }()
     
+    var descLabel: UILabel = {
+        let descLabel = UILabel()
+        descLabel.text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Malesuada pellentesque elit eget gravida cum. Dui nunc mattis enim ut. Ac felis donec et odio. Et tortor at risus viverra adipiscing at in tellus integer."
+        descLabel.numberOfLines = 0
+        descLabel.textAlignment = .justified
+        descLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        return descLabel
+    }()
+    
+    var stackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.axis = .vertical
+        stackView.spacing = 20
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        
+        return stackView
+    }()
+    
 // MARK: - functions
 
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemMint
-        view.addSubview(titleLabel)
-        view.addSubview(imageView)
+        addSubviews()
         setConstraints()
         
+    }
+    
+    func addSubviews(){
+        view.addSubview(titleLabel)
+        view.addSubview(imageView)
+        view.addSubview(stackView)
+        stackView.addArrangedSubview(descLabel)
     }
     
     func setConstraints(){
@@ -47,7 +72,11 @@ class ViewController: UIViewController {
             imageView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 50),
             imageView.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
             imageView.widthAnchor.constraint(equalTo: view.safeAreaLayoutGuide.widthAnchor, multiplier: 0.75),
-            imageView.heightAnchor.constraint(equalTo: imageView.widthAnchor)
+            imageView.heightAnchor.constraint(equalTo: imageView.widthAnchor),
+            
+            stackView.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 20),
+            stackView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
+            stackView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20)
         ])
     }
 
