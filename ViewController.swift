@@ -9,6 +9,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
+// MARK: - variables
+
     var titleLabel: UILabel = {
         let titleLabel = UILabel()
         titleLabel.text = "Title"
@@ -17,6 +19,8 @@ class ViewController: UIViewController {
         return titleLabel
     }()
     
+// MARK: - functions
+
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemMint
