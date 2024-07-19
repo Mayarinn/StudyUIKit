@@ -71,7 +71,11 @@ class ViewController: UIViewController {
             imageView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 50),
             imageView.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
             imageView.widthAnchor.constraint(equalTo: view.safeAreaLayoutGuide.widthAnchor, multiplier: 0.75),
-            imageView.heightAnchor.constraint(equalTo: imageView.widthAnchor)
+            imageView.heightAnchor.constraint(equalTo: imageView.widthAnchor),
+            
+            stackView.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 20),
+            stackView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
+            stackView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20)
         ])
     }
 
