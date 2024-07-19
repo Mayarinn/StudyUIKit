@@ -18,10 +18,14 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.addSubview(titleLabel)
         view.backgroundColor = .systemMint
+        view.addSubview(titleLabel)
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        setConstraints()
         
+    }
+    
+    func setConstraints(){
         NSLayoutConstraint.activate([
             titleLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 50),
             titleLabel.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor)
