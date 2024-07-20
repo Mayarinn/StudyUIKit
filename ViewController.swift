@@ -98,7 +98,9 @@ class ViewController: UIViewController {
             stackView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
             stackView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
             
-            textField.heightAnchor.constraint(equalToConstant: 35)
+            textField.heightAnchor.constraint(equalToConstant: 35),
+            
+            button.widthAnchor.constraint(equalTo: stackView.widthAnchor, multiplier: 0.3)
         ])
     }
 
