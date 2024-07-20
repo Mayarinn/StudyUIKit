@@ -70,6 +70,7 @@ class ViewController: UIViewController {
         view.addSubview(imageView)
         view.addSubview(stackView)
         stackView.addArrangedSubview(descLabel)
+        stackView.addArrangedSubview(textField)
     }
     
     func setConstraints(){
