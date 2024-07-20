@@ -81,6 +81,7 @@ class ViewController: UIViewController {
         view.addSubview(stackView)
         stackView.addArrangedSubview(descLabel)
         stackView.addArrangedSubview(textField)
+        stackView.addArrangedSubview(button)
     }
     
     func setConstraints(){
