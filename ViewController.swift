@@ -41,6 +41,7 @@ class ViewController: UIViewController {
     var textField: UITextField = {
         let textField = UITextField()
         textField.backgroundColor = .white
+        textField.layer.cornerRadius = 7
         textField.placeholder = "waiting for you"
         
         return textField
