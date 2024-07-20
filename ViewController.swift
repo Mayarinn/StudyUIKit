@@ -38,8 +38,29 @@ class ViewController: UIViewController {
         return descLabel
     }()
     
+    var textField: UITextField = {
+        let textField = UITextField()
+        textField.backgroundColor = .white
+        textField.layer.cornerRadius = 7
+        textField.placeholder = "waiting for you"
+        
+        return textField
+    }()
+    
+    var button: UIButton = {
+        let button = UIButton()
+        button.setTitle("Push Me", for: .normal)
+        button.backgroundColor = .purple
+        button.setTitleColor(.magenta, for: .highlighted)
+        button.layer.cornerRadius = 7
+        button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
+        
+        return button
+    }()
+    
     var stackView: UIStackView = {
         let stackView = UIStackView()
+        stackView.alignment = .center
         stackView.axis = .vertical
         stackView.spacing = 20
         stackView.translatesAutoresizingMaskIntoConstraints = false
@@ -62,6 +83,8 @@ class ViewController: UIViewController {
         view.addSubview(imageView)
         view.addSubview(stackView)
         stackView.addArrangedSubview(descLabel)
+        stackView.addArrangedSubview(textField)
+        stackView.addArrangedSubview(button)
     }
     
     func setConstraints(){
@@ -76,8 +99,18 @@ class ViewController: UIViewController {
             
             stackView.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 20),
             stackView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
-            stackView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20)
+            stackView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
+            
+            textField.heightAnchor.constraint(equalToConstant: 35),
+            textField.widthAnchor.constraint(equalTo: stackView.widthAnchor),
+            
+            button.widthAnchor.constraint(equalTo: stackView.widthAnchor, multiplier: 0.3)
         ])
+    }
+    
+    @objc func buttonTapped(_ sender: UIButton) {
+        print(textField.text ?? "")
+        textField.text = ""
     }
 
 }
