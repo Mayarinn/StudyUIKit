@@ -51,6 +51,7 @@ class ViewController: UIViewController {
         let button = UIButton()
         button.setTitle("Push Me", for: .normal)
         button.backgroundColor = .purple
+        button.setTitleColor(.magenta, for: .highlighted)
         button.layer.cornerRadius = 7
         button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
         
