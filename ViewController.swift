@@ -109,7 +109,8 @@ class ViewController: UIViewController {
     }
     
     @objc func buttonTapped(_ sender: UIButton) {
-        print("hello")
+        print(textField.text ?? "")
+        textField.text = ""
     }
 
 }
