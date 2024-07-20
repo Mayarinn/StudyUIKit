@@ -58,6 +58,7 @@ class ViewController: UIViewController {
     
     var stackView: UIStackView = {
         let stackView = UIStackView()
+        stackView.alignment = .center
         stackView.axis = .vertical
         stackView.spacing = 20
         stackView.translatesAutoresizingMaskIntoConstraints = false
