@@ -52,6 +52,7 @@ class ViewController: UIViewController {
         button.setTitle("Push Me", for: .normal)
         button.backgroundColor = .purple
         button.layer.cornerRadius = 7
+        button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
         
         return button
     }()
@@ -104,6 +105,10 @@ class ViewController: UIViewController {
             
             button.widthAnchor.constraint(equalTo: stackView.widthAnchor, multiplier: 0.3)
         ])
+    }
+    
+    @objc func buttonTapped(_ sender: UIButton) {
+        print("hello")
     }
 
 }
