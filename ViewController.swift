@@ -38,6 +38,14 @@ class ViewController: UIViewController {
         return descLabel
     }()
     
+    var textField: UITextField = {
+        let textField = UITextField()
+        textField.backgroundColor = .white
+        textField.placeholder = "waiting for you"
+        
+        return textField
+    }()
+    
     var stackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
