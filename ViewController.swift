@@ -47,6 +47,15 @@ class ViewController: UIViewController {
         return textField
     }()
     
+    var button: UIButton = {
+        let button = UIButton()
+        button.setTitle("Push Me", for: .normal)
+        button.backgroundColor = .purple
+        button.layer.cornerRadius = 7
+        
+        return button
+    }()
+    
     var stackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
